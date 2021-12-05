@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adventofcode.Day1Part2Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-05T21:02:50" hostname="Jamess-MacBook-Pro.local" time="0.193">
+  <properties/>
+  <testcase name="theAnswerIsOneThousandOneHundredEightyFour()" classname="com.adventofcode.Day1Part2Tests" time="0.193"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
