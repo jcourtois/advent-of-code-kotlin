@@ -86,7 +86,7 @@ class Day1Part2Tests {
 	}
 
 	@Test
-	fun theAnswerIsOneThousandOneHundredEightyFour() {
+	fun theAnswerIsOneThousandOneHundredFiftyEight() {
 		val string = resourceLoader.getResource("day1.txt").file.readText()
 		assertThat(Day1Part2.eval(string, '\n')).isEqualTo(1158)
 	}

@@ -18,7 +18,7 @@ class Day1Part2 {
         }
     }
 
-    data class Accumulator(val acc: Int, val previousResult: Int?, val twoAgo: Int?, val oneAgo: Int?) {
+    data class Accumulator(val acc: Int, val previousResult: Int?, val oneAgo: Int?, val twoAgo: Int?) {
         fun update(current: Int): Accumulator {
             val currentResult = pastTwo()?.plus(current)
             val increase = when {
