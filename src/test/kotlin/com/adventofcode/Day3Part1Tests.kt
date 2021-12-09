@@ -34,17 +34,17 @@ class Day3Part1Tests {
 
     @Test
     fun test5() {
-        assertThat(Day3Part1.count("01\n10")).isEqualTo(Analysis(lines = 2, counts = listOf(1, 1)))
+        assertThat(Day3Part1.count("01\n10")).isEqualTo(Analysis(lines = 2, columnCounts = listOf(1, 1)))
     }
 
     @Test
     fun test6() {
-        assertThat(Day3Part1.count("00\n00")).isEqualTo(Analysis(lines = 2, counts = listOf(0, 0)))
+        assertThat(Day3Part1.count("00\n00")).isEqualTo(Analysis(lines = 2, columnCounts = listOf(0, 0)))
     }
 
     @Test
     fun test7() {
-        assertThat(Day3Part1.count("11\n11\n10\n10\n10")).isEqualTo(Analysis(lines = 5, counts = listOf(5, 2)))
+        assertThat(Day3Part1.count("11\n11\n10\n10\n10")).isEqualTo(Analysis(lines = 5, columnCounts = listOf(5, 2)))
     }
 
     @Test
@@ -52,7 +52,7 @@ class Day3Part1Tests {
         assertThat(
             Day3Part1.count(
                 "00100\n11110\n10110\n10111\n10101\n01111\n00111\n11100\n10000\n11001\n00010\n01010"))
-            .isEqualTo(Analysis(lines = 12, counts = listOf(7, 5, 8, 7, 5)))
+            .isEqualTo(Analysis(lines = 12, columnCounts = listOf(7, 5, 8, 7, 5)))
     }
 
     @Test

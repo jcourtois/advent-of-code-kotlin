@@ -3,7 +3,6 @@ package com.adventofcode
 class Day3Part1 {
 
     companion object {
-
         fun powerConsumption(s: String): Int {
             val (gammaRate, epsilonRate) = analyze(s)
             return gammaRate * epsilonRate
@@ -25,7 +24,9 @@ class Day3Part1 {
         fun count(s: String): Analysis {
             val array = parse(s)
             require(array.isNotEmpty())
-            return Analysis(array.size, array[0].mapIndexed { index, _ -> array.sumOf { it[index] } })
+            return Analysis(
+                lines = array.size,
+                columnCounts = array[0].mapIndexed { index, _ -> array.sumOf { it[index] } })
         }
 
         fun List<Int>.toInt(): Int {
@@ -38,4 +39,4 @@ class Day3Part1 {
     }
 }
 
-data class Analysis(val lines: Int, val counts: List<Int>)
+data class Analysis(val lines: Int, val columnCounts: List<Int>)
