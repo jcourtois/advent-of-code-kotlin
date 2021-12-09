@@ -4,20 +4,19 @@ class Day3Part2 {
 
     companion object {
         fun lifeSupportRating(s: String): Int {
-            val (gammaRate, epsilonRate) = analyze(s)
-            return gammaRate * epsilonRate
+            val (oxygenValue, carbonValue) = analyze(s)
+            return oxygenValue * carbonValue
         }
 
         fun analyze(s: String): Pair<Int, Int> {
             val array = parse(s)
-
-            val oxygenValue = findValue(array, ::oxygenBitCriteria).toInt()
-            val carbonValue = findValue(array, ::carbonBitCriteria).toInt()
+            val oxygenValue = findValueWith(::oxygenBitCriteria, array).toInt()
+            val carbonValue = findValueWith(::carbonBitCriteria, array).toInt()
 
             return oxygenValue to carbonValue
         }
 
-        private fun findValue(array: List<List<Int>>, expectation: (Int, Int) -> Int): List<Int> {
+        private fun findValueWith(expectation: (Int, Int) -> Int, array: List<List<Int>>): List<Int> {
             var candidates = array
             for (i in array.first().indices) {
                 val ones = candidates.sumOf { it[i] }
