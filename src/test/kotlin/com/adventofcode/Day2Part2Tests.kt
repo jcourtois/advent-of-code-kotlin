@@ -35,7 +35,7 @@ class Day2Part2Tests {
 
     @Test
     fun down9AndUp8isOne() {
-        assertThat(Day2Part2.eval("down 5\nforward 5\nup 5\nforward100")).isEqualTo(Sub(105, 25, 0))
+        assertThat(Day2Part2.eval("down 5\nforward 5\nup 5\nforward 100")).isEqualTo(Sub(105, 25, 0))
     }
 
     @Test

@@ -37,6 +37,6 @@ class Day3Part1 {
             return fold(0) { acc, i -> acc shl 1 or (1 - i) }
         }
     }
-}
 
-data class Analysis(val lines: Int, val columnCounts: List<Int>)
+    data class Analysis(val lines: Int, val columnCounts: List<Int>)
+}
