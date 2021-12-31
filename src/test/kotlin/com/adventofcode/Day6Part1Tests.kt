@@ -28,7 +28,7 @@ class Day6Part1Tests {
     @Test
     fun test3() {
         val result = Day6Part1.eval("3,4,3,1,2", 26)
-        assertThat(result).isEqualTo(6)
+        assertThat(result).isEqualTo(51)
     }
 
     @Test
