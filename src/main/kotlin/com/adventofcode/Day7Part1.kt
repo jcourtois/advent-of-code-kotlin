@@ -1,5 +1,3 @@
-@file:Suppress("DuplicatedCode")
-
 package com.adventofcode
 
 import kotlin.math.abs
@@ -11,13 +9,10 @@ class Day7Part1 {
         fun eval(s: String): Int {
             val crabs = parse(s)
             val range = crabs.minOrNull()!!..crabs.maxOrNull()!!
-            val distances = range.groupBy { it }
-                .mapKeys { (position, _) -> crabs.sumOf { abs(it - position) } }
-            return distances.keys.minOrNull()!!
+            val distances = range.associateWith { position -> crabs.sumOf { abs(it - position) } }
+            return distances.values.minOrNull()!!
         }
 
-        fun parse(s: String): List<Int> {
-            return s.trim().split(',').map(String::toInt)
-        }
+        private fun parse(s: String): List<Int> = s.trim().split(',').map(String::toInt)
     }
 }
