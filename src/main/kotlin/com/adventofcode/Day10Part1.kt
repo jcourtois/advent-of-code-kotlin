@@ -23,12 +23,10 @@ class Day10Part1 {
     data class Line(val content: String) {
         fun validate(): Int {
             val deque = ArrayDeque<Char>()
-            for (c in content) {
-                when (c) {
-                    in initializers       -> deque.push(c)
-                    matches[deque.peek()] -> deque.pop()
-                    else                  -> return errorValue[c]!!
-                }
+            for (c in content) when (c) {
+                in initializers       -> deque.push(c)
+                matches[deque.peek()] -> deque.pop()
+                else                  -> return errorValue[c]!!
             }
             return 0
         }
